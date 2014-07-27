@@ -1,5 +1,12 @@
 Rails.application.routes.draw do
-  resources :lists
+
+  resources :lists do
+    resources :tasks do
+      get :complete
+    end
+  end
+
+  # match 'lists/:list_id/tasks/:id/complete' => 'tasks#complete', :as => :complete_task, via: 'get'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -1,5 +1,6 @@
 class ListsController < ApplicationController
 
+	before_filter :find_list, only: [:show, :edit, :update, :destroy]
 	respond_to :html, :xml, :js
 
 	def index
@@ -22,15 +23,13 @@ class ListsController < ApplicationController
 	end
 
 	def show
-		@list = List.find(params[:id])
+		@task = @list.tasks.new
 	end
 
 	def edit
-		@list = List.find(params[:id])
 	end
 
 	def update
-		@list = List.find(params[:id])
 		if @list.update_attributes(list_params)
 			flash[:notice] = "List updated."
 			respond_with(@list, :location => list_url(@list))
@@ -41,7 +40,6 @@ class ListsController < ApplicationController
 	end
 
 	def destroy
-		@list = List.find(params[:id])
 		if @list.destroy
 			flash[:notice] = "List deleted."
 			redirect_to lists_url
@@ -54,7 +52,11 @@ class ListsController < ApplicationController
 	private
 
 	def list_params
-		params.require(:list).permit(:create, :show, :update)
+		params.require(:list).permit(:name, :description)
+	end
+
+	def find_list
+		@list = List.find(params[:id])
 	end
 
 end
