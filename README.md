@@ -2,7 +2,7 @@
 
 At the top of the file there should be a short introduction and/ or overview that explains **what** the project is. This description should match descriptions added for package managers (Gemspec, package.json, etc.)
 
-http://vimeo.com/11436026
+http://vimeo.com/11436026 <br>
 http://vimeo.com/11435163
 
 ## Code Example
