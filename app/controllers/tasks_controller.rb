@@ -1,6 +1,6 @@
 class TasksController < ApplicationController
 
-	attr_accessor :completed
+	attr_accessor :completed, :incomplete
 	before_filter :find_list
 	respond_to :html, :xml, :js
 
@@ -16,7 +16,7 @@ class TasksController < ApplicationController
 	end
 
 	def complete
-		@task = @list.tasks.find(task_params)
+		@task = Task.find(params[:id])
 		@task.completed = true
 		@task.save
 		redirect_to list_url(@list)
@@ -25,7 +25,7 @@ class TasksController < ApplicationController
 	private
 
 	def task_params
-		params.require(:task).permit(:description, :task_id)
+		params.require(:task).permit(:description, :id)
 	end
 
 	def find_list
