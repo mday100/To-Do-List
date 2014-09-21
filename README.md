@@ -1,34 +1,15 @@
-## Synopsis
+## Simple Rails To Do List
 
-At the top of the file there should be a short introduction and/ or overview that explains **what** the project is. This description should match descriptions added for package managers (Gemspec, package.json, etc.)
+[![Screenshot](screenshot.png)](http://railstodolist.herokuapp.com/)
 
-http://vimeo.com/11436026 <br>
-http://vimeo.com/11435163
+## Summary
 
-## Code Example
+Simple Rails To Do List is a to do list built entirely on Ruby on Rails. This was one of the first web apps I made entirely utilizing Ruby on Rails with the help of [Robin Fisher's Tutorial] (http://vimeo.com/11436026).
 
-Show what the library does as concisely as possible, developers should be able to figure out **how** your project solves their problem by looking at the code example. Make sure the API you are showing off is obvious, and that your code is short and concise.
+Built with straight up HTML / CSS / Bootstrap on the frontend and Ruby on Rails on the backend.
 
-## Motivation
+Hosted on Heroku.
 
-A short description of the motivation behind the creation and maintenance of the project. This should explain **why** the project exists.
 
-## Installation
-
-Provide code examples and explanations of how to get the project.
-
-## API Reference
-
-Depending on the size of the project, if it is small and simple enough the reference docs can be added to the README. For medium size to larger projects it is important to at least provide a link to where the API reference docs live.
-
-## Tests
-
-Describe and show how to run the tests with code examples.
-
-## Contributors
-
-Let people know how they can dive into the project, include important links to things like issue trackers, irc, twitter accounts if applicable.
-
-## License
-
-A short snippet describing the license (MIT, Apache, etc.)
+---
+Developed by [Matthew Day] (http://unlimitedday.com)
